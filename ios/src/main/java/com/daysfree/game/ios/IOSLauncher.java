@@ -1,18 +1,18 @@
-package com.daysfree.ios;
+package com.daysfree.game.ios;
 
 import org.robovm.apple.foundation.NSAutoreleasePool;
 import org.robovm.apple.uikit.UIApplication;
 
 import com.badlogic.gdx.backends.iosrobovm.IOSApplication;
 import com.badlogic.gdx.backends.iosrobovm.IOSApplicationConfiguration;
-import com.daysfree.DaysGame;
+import com.daysfree.game.DaysFree;
 
 /** Launches the iOS (RoboVM) application. */
 public class IOSLauncher extends IOSApplication.Delegate {
     @Override
     protected IOSApplication createApplication() {
         IOSApplicationConfiguration configuration = new IOSApplicationConfiguration();
-        return new IOSApplication(new DaysGame(), configuration);
+        return new IOSApplication(new DaysFree(), configuration);
     }
 
     public static void main(String[] argv) {

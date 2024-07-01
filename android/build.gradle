@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 
 android {
-  namespace "com.daysfree"
+  namespace "com.daysfree.game"
   compileSdk 34
   sourceSets {
     main {
@@ -24,7 +24,7 @@ android {
 		}
   }
   defaultConfig {
-    applicationId 'com.daysfree'
+    applicationId 'com.daysfree.game'
     minSdkVersion 19
     targetSdkVersion 34
     versionCode 1
@@ -113,7 +113,7 @@ tasks.register('run', Exec) {
   }
 
   def adb = path + "/platform-tools/adb"
-  commandLine "$adb", 'shell', 'am', 'start', '-n', 'com.daysfree/com.daysfree.android.AndroidLauncher'
+  commandLine "$adb", 'shell', 'am', 'start', '-n', 'com.daysfree.game/com.daysfree.game.android.AndroidLauncher'
 }
 
 eclipse.project.name = appName + "-android"
